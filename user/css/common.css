@@ -586,7 +586,8 @@ header .login-ok-btn > div:hover > a > i {
 }
 .modal-dialog{
   position: absolute;
-  max-width: 600px;
+  /* max-width: 600px; */
+  max-width: 500px;
   top: 50%;
   left: 60%;
 }
@@ -612,4 +613,13 @@ header .login-ok-btn > div:hover > a > i {
 .top_btn.active{
   opacity: 1;
 	visibility: visible;
+}
+
+/* coup_event */
+.coup_event{
+  left: 50px;
+  bottom: 50px;
+}
+.coup_event img{
+  width: 100px;
 }
