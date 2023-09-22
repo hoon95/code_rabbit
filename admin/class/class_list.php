@@ -125,7 +125,7 @@
   </form>
 
   <!-- bootstrap > content > tables 기본양식 코드 복붙 -->
-  <form action="plist_update.php">
+  <form action="clist_update.php">
     <table class="table mt-4 product_list">
       <thead>
         <tr>
