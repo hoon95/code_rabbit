@@ -1,5 +1,6 @@
 <?php
-
+  $title = '강좌 목록 - Code Rabbit';
+  $class_list_css = '<link rel="stylesheet" href="/attention/admin/css/class_list.css">';
   include_once $_SERVER['DOCUMENT_ROOT'].'/attention/admin/class/class_function.php';
   include_once $_SERVER['DOCUMENT_ROOT'].'/attention/admin/inc/header.php';
 
