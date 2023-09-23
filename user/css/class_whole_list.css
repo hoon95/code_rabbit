@@ -37,6 +37,9 @@ div.col.product_whole_aside {
 
 button.accordion-button.arrow_needless::after {display: none;}
 button.accordion-button {color: var(--dark-gray);}
+.accordion-button:not(.collapsed) {background-color: rgba(42,193,188,.5);}
+.accordion {--bs-accordion-btn-focus-box-shadow: rgba(42,193,188,.5);}
+.accordion-body:active {color: var(--mint);}
 
 .product_goods {padding-top: 24px;}
 .product_vertical_bar {padding: 0 10px;}
@@ -46,5 +49,6 @@ button.accordion-button {color: var(--dark-gray);}
 .product_price {font-size: var(--text5-size); font-weight: 600;}
 .product_four_set {padding-bottom: 48px;}
 article.col-3 {margin-bottom: 48px;}
-
+article img.product_whole_thumbnail {height: 156px; object-fit: fill;}
 .product_whole_section4 {margin:12px 0 72px 0;}
+

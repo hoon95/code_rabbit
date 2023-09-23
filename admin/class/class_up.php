@@ -1,6 +1,6 @@
 <?php
   $title = '강좌 등록 - Code Rabbit';
-  $class_up_css = '<link rel="stylesheet" href="/attention/admin/class/class_up.css">';
+  $class_up_css = '<link rel="stylesheet" href="/attention/admin/css/class_up.css">';
   include_once $_SERVER['DOCUMENT_ROOT'].'/attention/admin/inc/dbcon.php';
   include_once $_SERVER['DOCUMENT_ROOT'].'/attention/admin/class/class_function.php';
   include_once $_SERVER['DOCUMENT_ROOT'].'/attention/admin/inc/header.php';
