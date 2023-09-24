@@ -35,13 +35,69 @@
   while($rsNotice = $resultNotice -> fetch_object()){
     $rscNotice[] = $rsNotice;
   }
-  // var_dump($rscNotice);
-  
-  // var_dump($recentAdds);
 ?>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 <link rel="stylesheet" href="/attention/user/css/main.css">
+
+<dialog class="radius_medium" id="popup">
+  <h2 class="tt_01 text-center"><span class="mint">CODE</span><span class="red"> RABBIT</span></h2>
+  <p class="dark_gray text-center">LMS 유저 페이지 제작 프로젝트</p>
+  <p class="text1 mt-3">본 사이트는 구직용 포트폴리오 웹사이트이며,<br>
+    실제로 운영되는 사이트가 아닙니다.</p>
+  <hr>
+  <div>
+    <p><b>팀 Attention :</b> 김*훈(팀장), 기*은, 천*영, 한*연, 한*희</p>
+    <p class="mt-2"><b>제작기간 :</b> 2023. 09. 08 ~ 2023. 09. 25</p>
+    <p>
+      <b>기획서 :</b> <a href="https://www.figma.com/file/10UMk7aVCAB6EPqeRh8F59/LMS-%EA%B4%80%EB%A6%AC-%EC%82%AC%EC%9D%B4%ED%8A%B8?type=design&node-id=0%3A1&mode=design&t=rFV52jADv1RGWBGw-1" target="_blank">피그마</a>
+      <b class="ms-3">코드 :</b><i class="bi bi-github"></i><a href="https://github.com/hoon95/attention" target="_blank">깃허브</a>
+    </p>
+    <p><b>개발환경 :</b> html5, css3, javascript, php, mySQL</p>
+  </div>
+  <hr>
+  <div>
+    <p><b>업무분장</b></p>
+    <p><b>기획 : </b>내용추가 필요</p>
+    <p><b>디자인 : </b>내용추가 필요</p>
+    <p class="mt-2"><b>- 구현 완료 페이지 -</b></p>
+    <p><b>김*훈 :</b>
+      <a href=""> 로그인</a>(B),
+      <a href=""> 회원가입</a>(A),
+      <a href=""> 장바구니</a>(A),
+      <a href=""> 내 강의실</a>(B)
+    </p>
+    <p><b>기*은 :</b>
+      <a href=""> 메인</a>(F),
+      <a href=""> 쿠폰함</a>(A),
+      <a href=""> 쿠폰 이벤트</a>(A)
+    </p>
+    <p><b>천*영 :</b>
+      <a href=""> 메인</a>(A),
+      <a href=""> 공지사항</a>(A),
+      <a href=""> 내 강의실</a>(F)
+    </p>
+    <p><b>한*연 :</b>
+      <a href=""> 강의</a>(A),
+      <a href=""> 강의 상세</a>(A)
+    </p>
+    <p><b>한*희 :</b>
+      <a href=""> 푸터</a>(F),
+      <a href=""> 로그인</a>(F)
+    </p>
+    <p class="text5">F: Front / B: Back / A: All</p>
+  </div>
+  <hr>
+  <a href="http://hoon95.dothome.co.kr/attention/admin/login.php" class="text5 icon_mint">관리자 페이지 가기</a>
+
+  <div class="mt-4 d-flex justify-content-between">
+    <div class="d-flex align-items-center gap-2">
+      <label class="form-check-label" for="daycheck">하루 동안 보지 않기</label>
+      <input class="form-check-input" type="checkbox" id="daycheck">
+    </div>
+    <button id="close" type="button" class="text4"><img src="/attention/admin/img/piskel_rabbit.png" alt="">close</button>
+  </div>
+</dialog>
 
 <section class="banner">
   <h2 class="d-none">배너 슬라이드</h2>
@@ -51,14 +107,14 @@
       <!-- Slides -->
       <div class="swiper-slide slide1">
         <div class="container_cr">
-          <h3 class="tt_00 mg_bot">디자인 트렌드 끝판왕,<br>Figma와 Blender 타파하기</h3>
-          <p class="text1">다양한 직군과 효율적으로 협업하고<br>무료로 3D 모델링까지 배워요!</p>
+          <!-- <h3 class="tt_00 mg_bot">디자인 트렌드 끝판왕,<br>Figma와 Blender 타파하기</h3> -->
+          <!-- <p class="text1">다양한 직군과 효율적으로 협업하고<br>무료로 3D 모델링까지 배워요!</p> -->
         </div>
       </div>
       <div class="swiper-slide slide2">
         <div class="container_cr">
-          <h3 class="tt_00 mg_bot">디자인 트렌드 끝판왕,<br>Figma와 Blender 타파하기</h3>
-          <p class="text1">다양한 직군과 효율적으로 협업하고<br>무료로 3D 모델링까지 배워요!</p>
+          <!-- <h3 class="tt_00 mg_bot">디자인 트렌드 끝판왕,<br>Figma와 Blender 타파하기</h3> -->
+          <!-- <p class="text1">다양한 직군과 효율적으로 협업하고<br>무료로 3D 모델링까지 배워요!</p> -->
         </div>
       </div>
       <div class="swiper-slide slide3">
@@ -83,15 +139,15 @@
   <section class="cate_list d-flex flex-column justify-content-center text-center container_cr">
     <h2 class="tt_03"><strong class="mint">코드래빗</strong>의 다양한 코딩 분야</h2>
     <ul class="d-flex justify-content-between text3">
-      <li><a href=""><h3 class="mb-2"># html5</h3><img src="img/main/html5.svg" alt="css"></a></li>
-      <li><a href=""><h3 class="mb-2"># css</h3><img src="img/main/css.svg" alt="css"></a></li>
-      <li><a href=""><h3 class="mb-2"># javascript</h3><img src="img/main/javascript.svg" alt="javascript"></a></li>
-      <li><a href=""><h3 class="mb-2"># typescript</h3><img src="img/main/typescript.svg" alt="typescript"></a></li>
-      <li><a href=""><h3 class="mb-2"># react</h3><img src="img/main/react.svg" alt="react"></a></li>
-      <li><a href=""><h3 class="mb-2"># flutter</h3><img src="img/main/flutter.svg" alt="flutter"></a></li>
-      <li><a href=""><h3 class="mb-2"># node.js</h3><img src="img/main/node-js.svg" alt="node.js"></a></li>
-      <li><a href=""><h3 class="mb-2"># python</h3><img src="img/main/python.svg" alt="python"></a></li>
-      <li><a href=""><h3 class="mb-2"># vue-js</h3><img src="img/main/vue-dot-js.svg" alt="vue-js"></a></li>
+      <li><a href="/attention/user/class/class_whole_list.php?s_cate1=11&s_cate2=17&s_cate3=118&page=1&s_name="><h3 class="mb-2"># html5</h3><img src="img/main/html5.svg" alt="css"></a></li>
+      <li><a href="/attention/user/class/class_whole_list.php?s_cate1=11&s_cate2=18&s_cate3=21&page=1&s_name="><h3 class="mb-2"># css</h3><img src="img/main/css.svg" alt="css"></a></li>
+      <li><a href="/attention/user/class/class_whole_list.php?s_cate1=10&s_cate2=12&s_cate3=14&page=1&s_name="><h3 class="mb-2"># javascript</h3><img src="img/main/javascript.svg" alt="javascript"></a></li>
+      <li><a href="/attention/user/class/class_whole_list.php?s_cate1=10&s_cate2=12&s_cate3=16&page=1&s_name="><h3 class="mb-2"># typescript</h3><img src="img/main/typescript.svg" alt="typescript"></a></li>
+      <li><a href="/attention/user/class/class_whole_list.php?s_cate1=10&s_cate2=12&s_cate3=42&page=1&s_name="><h3 class="mb-2"># react</h3><img src="img/main/react.svg" alt="react"></a></li>
+      <li><a href="/attention/user/class/class_whole_list.php?s_cate1=10&s_cate2=12&s_cate3=48&page=1&s_name="><h3 class="mb-2"># flutter</h3><img src="img/main/flutter.svg" alt="flutter"></a></li>
+      <li><a href="/attention/user/class/class_whole_list.php?s_cate1=10&s_cate2=23&s_cate3=47&page=1&s_name="><h3 class="mb-2"># node.js</h3><img src="img/main/node-js.svg" alt="node.js"></a></li>
+      <li><a href="/attention/user/class/class_whole_list.php?s_cate1=35&s_cate2=44&s_cate3=74&page=1&s_name="><h3 class="mb-2"># python</h3><img src="img/main/python.svg" alt="python"></a></li>
+      <li><a href="/attention/user/class/class_whole_list.php?s_cate1=10&s_cate2=12&s_cate3=43&page=1&s_name="><h3 class="mb-2"># vue-js</h3><img src="img/main/vue-dot-js.svg" alt="vue-js"></a></li>
     </ul>
   </section>
 
@@ -132,7 +188,7 @@
     <div class="container_cr">
       <div class="d-flex align-items-end justify-content-between pt-5">
         <h2 class="tt_00">코드래빗의 BEST 강의를 만나보세요!</h2>
-        <a href="" class="text1 card_tt icon_mint">전체보기 +</a>
+        <a href="/attention/user/class/class_whole_list.php" class="text1 card_tt icon_mint">전체보기 +</a>
       </div>
       <p class="tt_03 pb-4">강의 볼 때마다 실력이 껑충!</p>
       <ul class="best_list d-flex gap-4">
@@ -226,19 +282,19 @@
       <div class="total d-flex radius_medium">
         <div class="col text-center">
           <img src="img/main/total_member.png" alt="회원 아이콘 이미지">
-          <p class="text1 card_tt mt-2"><spann class="count" data-num="<?= $rs_mem -> count; ?>"></spann> +</p>
+          <p class="text1 card_tt mt-2"><span class="count" data-num="<?= $rs_mem -> count; ?>"></span> +</p>
           <p class="mt-2">회원수</p>
         </div>
-        <span></span>
+        <span class="span"></span>
         <div class="col text-center">
           <img src="img/main/total_education.png" alt="교육신청 아이콘 이미지">
-          <p class="text1 card_tt mt-2"><spann class="count" data-num="<?= $rs_sale -> count; ?>"></spann> +</p>
+          <p class="text1 card_tt mt-2"><span class="count" data-num="<?= $rs_sale -> count; ?>"></span> +</p>
           <p class="mt-2">교육신청</p>
         </div>
-        <span></span>
+        <span class="span"></span>
         <div class="col text-center">
           <img src="img/main/total_partner.png" alt="협력사 아이콘 이미지">
-          <p class="text1 card_tt mt-2">293 +</p>
+          <p class="text1 card_tt mt-2"><span class="count" data-num="293"></span> +</p>
           <p class="mt-2">협력사</p>
         </div>
       </div>
@@ -347,10 +403,6 @@
       </li>
       
     </ul>
-  </section>
-
-  <section class="container_cr main_mg_t coup_event_sec">
-      <a href="/attention/user/event_vs2.0.php" class="btn btn-primary">쿠폰 이벤트 참여하기</a>
   </section>
 
   <section class="notice main_mg_t blue_Gray_back">

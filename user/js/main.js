@@ -50,23 +50,25 @@ const newSwiper = new Swiper(".new-slide", {
 /* /new slide */
 
 /* best-total */
+let hasCounted = false;
+
 $(window).scroll(function () {
-  const bestOffset = $('.total').offset().top;
-  const windowHeight = $(window).height();
-  const scrollPoint = $(window).scrollTop();
+  let bestOffset = $('.total').offset().top,
+      windowHeight = $(window).height(),
+      scrollPoint = $(window).scrollTop();
 
   // total 요소가 화면 안에 들어왔을 때 실행
-  if (scrollPoint + windowHeight >= bestOffset) {
-    $('.count').each(function () { //숫자 카운트 애니메이션
-      const $this = $(this),
-            countTo = $this.attr('data-num');
+  if (scrollPoint + windowHeight >= bestOffset && !hasCounted){
+    hasCounted = true; // 카운트가 한 번 실행되면 hasCounted를 true로 설정하여 중복 실행을 막음
+    $('.count').each(function(){ //숫자 카운트 애니메이션
+      let $this = $(this),
+          countTo = $this.attr('data-num');
 
-      $({ countNum: $this.text() }).stop().animate({
-        countNum: countTo
-      }, {
-        duration: 3000,
+      $({countNum: $this.text()}).stop().animate({
+        countNum: countTo},{
+        duration: 3000, 
         easing: 'linear',
-        step: function () {
+        step: function (){
           $this.text(Math.floor(this.countNum));
         },
         complete: function () {
@@ -74,7 +76,6 @@ $(window).scroll(function () {
         }
       });
     });
-    // $(window).off('scroll');
   }
 });
 /* /best-total */
@@ -95,16 +96,17 @@ const noticeSwiper = new Swiper('.notice_silde', {
 let cart_btn = $('.cart_btn');
 
 cart_btn.each(function(){
-  $(this).click(function(e) {
-    e.preventDefault();
+  $(this).click(function() {
     // 선택된 강의의 pid 가져오기
     let pid = $(this).val();
-    let total = parseFloat($(this).closest(".cart_add").find(".price").text().replace(',', ''));
-
+    let priceText = $(this).closest(".cart_add").find(".price").text();
+    let total = (priceText.trim() === '무료') ? 0 : parseFloat(priceText.replace(',', ''));
+    
     let data = {
-        pid : pid,
-        total: total
+      pid : pid,
+      total : total
     }
+    console.log(data);
 
     $.ajax({
       async:false,
@@ -129,3 +131,51 @@ cart_btn.each(function(){
   });
 });
 /* /add cart */
+
+/* popup */
+let popup = $('#popup'),
+    closeBtn = popup.find('#close'),
+    dayCheck = popup.find('#daycheck');
+      
+//쿠키생성
+function setCookie(name, value, day){
+  let date = new Date();
+  date.setDate(date.getDate()+day);   
+  document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
+}
+
+//쿠키 확인
+function cookieCheck(name){
+  let cookieArr = document.cookie.split(';');
+  let visited = false;
+
+  for(let cookie of cookieArr){
+    if(cookie.search(name) > -1){
+      visited = true;
+      break;
+    }
+  }
+  //visited 값이 false면 dialog 보이게
+  if(!visited){
+    popup.attr('open','');
+  } else {
+    popup.removeAttr("open");
+  }
+}
+cookieCheck('Rabbit');
+
+closeBtn.click(function(){
+  popup.removeAttr('open');
+  if(dayCheck.prop("checked")){
+    setCookie('Rabbit','code', 1);
+  }else{
+    setCookie('Rabbit','code', -1);
+  }
+});
+/* /popup */
+
+
+/* roullete popoup*/
+$(".roullete_close_btn").click(function() {
+  $(this).closest('.coup_event').css({ visibility: "hidden" });
+})

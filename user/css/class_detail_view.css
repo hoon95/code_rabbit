@@ -107,3 +107,7 @@ div.accordion-body {border: 1px solid var(--light-gray); padding-left: 0;}
 
 #recent {bottom: 108px;}
 .top_btn {bottom: 48px;}
+
+.play_hidden{
+  color: var(--gray) !important;
+}
