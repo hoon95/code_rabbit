@@ -1,6 +1,5 @@
 <?php
   require_once $_SERVER['DOCUMENT_ROOT'].'/attention/user/inc/header.php';
-  require_once $_SERVER['DOCUMENT_ROOT'].'/attention/user/inc/user_check.php';
 
   $where = '';
   if(isset($_SESSION['UID'])){
@@ -121,6 +120,9 @@
 
   <script src="/attention/user/js/jquery.number.min.js"></script>
   <script>
+    $(function(){
+      $('#recent').remove();
+    })
     function cartCalc(){
         let subtotal = 0;
         $('.cart_area tr').each(function(){

@@ -1,7 +1,7 @@
 <div class="coup_event position-fixed d-flex align-items-start">
-  <button class="close_btn" type="button"><i class="bi material-symbols-outlined icon_red">close</i></button>
+  <!-- <button class="roullete_close_btn" type="button"><i class="bi material-symbols-outlined icon_red">close</i></button> -->
   <a href="/attention/user/event_vs2.0.php" class="d-inline-block">
-    <img src="/attention/user/img/coup/coup_pop.png" alt="쿠폰 이벤트 이미지 링크">
+    <img src="/attention/user/img/coup/coup_pop1.svg" alt="쿠폰 이벤트 이미지 링크">
   </a>
 </div>
 
@@ -104,22 +104,27 @@
     setInterval(checkImag); // 페이지 내용이 변경될 때마다 함수 실행
 
     /* top_btn,recent */
-    let recent = $('#recent'),
+    let pageHeight = $(document).height(), //페이지 전체 높이
+        recent = $('#recent'),
         topBtn = $('.top_btn'),
         windowHeight = $(window).height(),
         topOffset = windowHeight / 3,
         topScroll = 0;
 
-    $(window).scroll(() => {
-      topScroll = $(window).scrollTop();
-      if (topScroll > topOffset) {
-        recent.addClass('active');
-        topBtn.addClass('active');
-      } else {
-        recent.removeClass('active');
-        topBtn.removeClass('active');
-      }
-    });
+    if (pageHeight <= 1400) { // 페이지 높이가 1400이하라면
+      recent.addClass('active');
+    } else{                   // 페이지 높이가 1400이상이면 스크롤 이벤트
+      $(window).scroll(() => {
+        topScroll = $(window).scrollTop();
+        if (topScroll > topOffset) {
+          recent.addClass('active');
+          topBtn.addClass('active');
+        } else {
+          recent.removeClass('active');
+          topBtn.removeClass('active');
+        }
+      });
+    }
 
     topBtn.on('click', function(e){
       e.preventDefault();
@@ -143,11 +148,6 @@
         window.open(url, "bizCommPop", "width=750, height=700;");
         return false;
       });
-
-    //룰렛 팝업  
-    $(".close_btn").click(function() {
-      $(this).parent().hide();
-    });
 
   </script>
 </body>
