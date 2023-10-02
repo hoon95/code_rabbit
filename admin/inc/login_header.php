@@ -52,8 +52,8 @@
   <hr>
   <div>
     <p><b>업무분장</b></p>
-    <p><b>기획 :</b></p>
-    <p><b>디자인 :</b></p>
+    <p><b>기획 :</b> 팀원 전체</p>
+    <p><b>디자인 :</b> 구현 담당자</p>
     <p class="mt-2"><b>- 구현 완료 페이지 -</b></p>
     <p><b>김*훈 :</b><a> 로그인</a>, <a>대시보드</a>, <a>매출관리</a>, <a>회원관리</a>
     </p>
@@ -65,6 +65,7 @@
   </div>
   <hr>
   <p class="text4">아이디 : admin / 비밀번호 : 1111</p>
+  <p><a href="http://hoon95.dothome.co.kr/attention/user/index.php" target="_blank" class="text4 icon_mint">사용자 페이지 가기</a></p>
 
   <div class="mt-4 d-flex justify-content-between">
     <div class="d-flex align-items-center gap-2">

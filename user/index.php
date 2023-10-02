@@ -50,7 +50,7 @@
     <p><b>팀 Attention :</b> 김*훈(팀장), 기*은, 천*영, 한*연, 한*희</p>
     <p class="mt-2"><b>제작기간 :</b> 2023. 09. 08 ~ 2023. 09. 25</p>
     <p>
-      <b>기획서 :</b> <a href="https://www.figma.com/file/10UMk7aVCAB6EPqeRh8F59/LMS-%EA%B4%80%EB%A6%AC-%EC%82%AC%EC%9D%B4%ED%8A%B8?type=design&node-id=0%3A1&mode=design&t=rFV52jADv1RGWBGw-1" target="_blank">피그마</a>
+      <b>기획서 :</b> <a href="https://www.figma.com/file/ODlTPVhE5OwtLyh4Lk1DwZ/Code-Rabbit-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%8E%98%EC%9D%B4%EC%A7%80?type=design&node-id=0%3A1&mode=design&t=29cc5vO2m8VFwkDu-1" target="_blank">피그마</a>
       <b class="ms-3">코드 :</b><i class="bi bi-github"></i><a href="https://github.com/hoon95/attention" target="_blank">깃허브</a>
     </p>
     <p><b>개발환경 :</b> html5, css3, javascript, php, mySQL</p>
@@ -87,7 +87,7 @@
     <p class="text5">F: Front / B: Back / A: All</p>
   </div>
   <hr>
-  <a href="http://hoon95.dothome.co.kr/attention/admin/login.php" class="text5 icon_mint">관리자 페이지 가기</a>
+  <a href="http://hoon95.dothome.co.kr/attention/admin/login.php" target="_blank" class="text5 icon_mint">관리자 페이지 가기</a>
 
   <div class="mt-4 d-flex justify-content-between">
     <div class="d-flex align-items-center gap-2">
