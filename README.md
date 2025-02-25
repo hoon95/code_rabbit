@@ -66,8 +66,8 @@
 
 <table>
   <tr>
-    <td><img src="/public/admin/2.png" width="200"></td>
-    <td><img src="/public/admin/3.png" width="200"></td>
+    <td><img src="/public/admin/2.png"></td>
+    <td><img src="/public/admin/3.png"></td>
   </tr>
 </table>
 
